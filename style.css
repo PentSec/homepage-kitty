@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+:root {
+    --primary-color:#111318;
+    --secondary-color:#3deaa4;
+    --background-color: #3b3b3b;
+    
+}
+html {
+    background-color: var(--background-color);
+
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    display:contents;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.rect {
+height: 60vh;
+width: 60vw;
+background-color: var(--primary-color);
+padding: 15px;
+border-radius: 0px 0px 10px 10px;
+box-shadow: 10px 10px 0px #00000040;
+}
+
+.text {
+    border: none;
+    outline: none;
+    width: 100vh;
+    color: var(--secondary-color);
+    background: none;
+    font-size: 20px;
+    font-family: 'Press Start 2P' , cursive;
+}
+
+.dtext {
+    font-size: 15px;
+    color: var(--secondary-color);
+    color: #3deaa4;
+
+
+}
+
+.centered-text {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.icons { 
+    height: 1vh;
+    width: 60vw;
+    background-color: #ffffffa6;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom:15px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 10px 10px 0px #00000040;
+    display: flex;
+    grid-column: span;
+    }
+.fas{
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    align-content: right;
+    font-size:10px ;
+}
+.searchform {
+    display: inline;
+}
+.url {
+color: var(--secondary-color);
+font-size: 1.7vh;
+font-family: 'Press Start 2P', cursive;
+padding: 8px;
+}
+.links{
+    padding-top: 50vh;
+}
+.hour::before {
+    margin-right: 5px;
+    content: "🕑"; 
+}
+
+.hour::after {
+    content: ":";
+    font-style: italic;
+    font-weight: bold;
+    }
+
+.minut::before {
+    content: "";
+    margin-right: -7px;
+    font-style: italic;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    .main {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .clock {
+        font-size: 1.2em;
+    }
+
+    .icons {
+        gap: 5px;
+    }
+
+    .links a {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}

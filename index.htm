@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <link rel="shortcut icon" href="favicon.ico" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeff Browser</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="main-container"></div>
+        <div class="main">
+            <div class="icons">
+                <i class="fas fa-times"></i>
+                <i class="fas fa-window-minimize"></i>
+                <i class="fas fa-compress"></i>
+                <p class="centered-text">Jeff@Jeff:~</p>
+                <div class="clock">
+                    <span class="hour"></span>
+                    <span class="minut"></span>
+                </div>
+            </div>
+        <div class="rect">
+            <span class="dtext">┌─(👉ﾟヮﾟ)👉$</span>
+            <form action="http://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+                <input type="text" class="text" name="q" autofocus>
+            </form>
+            <div class="links">
+                    <a href="https://instagram.com" class="url 13">Instagram</a>
+                    <a href="https://youtube.com" class="url 23">Youtube</a>
+                    <a href="https://github.com" class="url 33">Github</a>
+                    <a href="https://codepen.io" class="url 13">Codepen</a>
+                    <a href="https://reddit.com" class="url 23">Reddit</a>
+                    <a href="https://web.Whatsapp.com" class="url 33">Whatsapp</a>
+                    </div>
+            </div>
+        </div>
+        </div>
+    <script>
+        document.querySelector('.searchform').addEventListener('submit', function(event) {
+            var input = document.querySelector('.text');
+            setTimeout(function() {
+                input.value = '';
+            }, 1);
+        });
+    </script>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            document.querySelector('.clock .hour').textContent = hours;
+            document.querySelector('.clock .minut').textContent = minutes;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
